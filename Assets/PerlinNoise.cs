@@ -15,6 +15,7 @@ public class PerlinNoise : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        GetComponent<Light>().intensity = Mathf.PerlinNoise(Random.Range(minIntensity, maxIntensity),1f);
+       float range = Random.Range(minIntensity, maxIntensity);
+        GetComponent<Light>().intensity = Mathf.PerlinNoise(range, 0.1f);
     }
 }
